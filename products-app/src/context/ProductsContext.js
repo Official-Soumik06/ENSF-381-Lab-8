@@ -18,8 +18,7 @@ export const ProductsProvider = ({ children }) => {
         newProducts[index] = product;
         return newProducts;
       } else {
-        // Product doesn't exist, add it as a new product
-        // If the product doesn't have an ID, generate one
+       
         const newProduct = product.id ? product : { ...product, id: Date.now() };
         return [...currentProducts, newProduct];
       }
